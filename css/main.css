@@ -1,0 +1,288 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: url(https://hexschool.github.io/js-filter/assets/bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    font-family: "NotoSansCJKtc-Bold";
+    color: #2a2a2a;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.wrap{
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 0 3rem 0;
+}
+.logo {
+    padding-bottom: 2rem;
+    & a{
+    display: block;
+    background:url(https://firebasestorage.googleapis.com/v0/b/hexschool-courses.appspot.com/o/course%2FJS%20%E5%89%8D%E7%AB%AF%E4%BF%AE%E7%B7%B4%E5%85%A8%E6%94%BB%E7%95%A5%2F1628942714013-logo%20%E6%94%B9.png?alt=media&token=583e78ed-6a6c-4660-9f0e-2f59f8eb78e2)
+    no-repeat;
+    width: 450px;
+    height: 105px;
+    text-indent: 101%;
+    overflow: hidden;
+    cursor: pointer;
+    }
+}
+.main{
+    background-color: #fff;
+    border: 5px solid #F8D45A;
+    padding: 2.5rem;
+    box-shadow: white 0px 0px 0px 0.625rem;
+    border-radius: 5px;
+    position: relative;
+    & .data-Date{
+        position: absolute;
+        color: gray;
+        font-weight: bold;
+    }
+}
+.btn-group{
+    display: flex;
+    justify-content: center;
+    & .btn-type{
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem 2.5rem;
+        color: #2a2a2a;
+        letter-spacing: 1px;
+        margin: 0 0.3125rem 1.25rem 0.3125rem;
+        border: 2px solid black;
+        background-color: transparent;
+        &:hover{
+            background-color: #f8d45a;
+        }
+    }
+    .active{
+        background-color: #f8d45a;
+    }
+}
+.btn{
+    display: inline-block;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 1px 1px ;
+    transition: color 150ms ease-in-out,background-color 150ms ease-in-out,border-color 150ms ease-in-out,box-shadow 150ms ease-in-out;
+}
+.search-group{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    & .crop-input{
+        width: 40.625%;
+        display: flex;
+        flex-direction: row;
+        border-radius: 0.25rem;
+        box-shadow: 1px 1px 3px #899e39;
+        & label{
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background-color: #899e39;
+            padding: 0.5rem 1rem;
+            border-bottom-left-radius: 0.25rem;
+            border-top-left-radius: 0.25rem;
+            text-align: center;
+            width: 27.5%;
+            color: white;
+            font-weight: bold;
+        }
+        & input{
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+            border: 2px #899e39 solid;
+            padding: 0.375rem;
+            margin-left: -0.3125rem;
+            width: 80%;
+            outline: 0;
+            font-size: inherit;
+        }
+    }
+    & button{
+        margin-left: 0.5rem;
+        background-color: #899e39;
+        padding: 0.5rem 3rem;
+        color: white;
+        font-size: inherit;
+        border-color: transparent;
+        box-shadow: 1px 1px 3px #899e39;
+        font-weight: bold;
+    }
+}
+.sort-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    & p{
+       font-weight: 900;
+       font-size: 1.2rem; 
+    }
+    & select{
+        text-align: left;
+        padding: 0.5rem 0.325rem;
+        margin-left: 0.5rem;
+    }
+    & .sort-option{
+        display: none;
+    }
+}
+.sort-table{
+    width: 100%;
+    border-spacing: 2px;
+    text-align: center;
+    & thead{
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        background-color: #f4f1ea;
+        font-size: 1rem;
+        & th{
+            padding: 0.5rem 0.5rem;
+            font-weight: 700;
+            position: relative;
+            cursor: pointer;
+            & span{
+                padding-left: 0.5rem;
+                & i{
+                    position: absolute;
+                    opacity: 0.5;
+                }
+                & .active{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    & tbody{
+        & tr{
+            border-bottom: #dee2e6 2px solid;
+        }
+        & td{
+            padding: 0.5rem 0.5rem;
+        }
+        .crop-name,.market-name{
+            font-weight: 700;
+        }
+    }
+}
+.filter-list tr td{
+    padding: 1rem 0;
+}
+.pageArea{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    cursor: pointer;
+    & li{
+        border: 0.1px solid #899E39;
+        padding: 0.25rem 0.375rem;
+        min-width: 38px;
+        text-align: center;
+        &:hover{
+            background-color: #8a9e3985;
+            color: white;
+        }
+    }
+    & .first{
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+    & .last{
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+    & .active{
+        background-color: #899E39;
+        cursor:default;
+        &:hover{
+            background-color: #899E39;
+            color: black;
+        }
+    }
+    & .unactive{
+        color: rgb(180, 180, 180);
+        cursor:not-allowed;
+        &:hover{
+            background-color: transparent;
+            color: rgb(180, 180, 180);
+        }
+    }
+}
+.hide{
+    opacity: 0;
+}
+@media (max-width:767px){
+    .wrap{
+        padding: 0;
+    }
+    .logo {
+        padding: 0.5rem 0 0.5rem 0;
+        & a{
+            display: block;
+            background:url(https://firebasestorage.googleapis.com/v0/b/hexschool-courses.appspot.com/o/course%2FJS%20%E5%89%8D%E7%AB%AF%E4%BF%AE%E7%B7%B4%E5%85%A8%E6%94%BB%E7%95%A5%2F1629001163643-logo-sm.png?alt=media&token=914f40fc-c143-4aaa-a1c3-fb0bdd17fa9c)
+            no-repeat;
+            width: 178px;
+            height: 50px;
+            margin: 0 auto;
+        }
+    }
+    .main{
+        padding: 0.75rem;
+        & .data-Date{
+            right: 0rem;
+            top: 4rem;
+            color: gray;
+            font-weight: bold;
+        }
+    }
+    .search-group{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0.5rem;
+        .crop-input{
+            margin-bottom: 0.325rem;
+            width: 100%;
+        }
+        button{
+            display: block;
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    .sort-content{
+        padding: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .sort-table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        & thead{
+            & th{
+                padding: 0.5rem;
+                & span{
+                    padding: 0 0.75rem 0 0;
+                }
+            }
+        }
+        & tbody{
+            & td{
+                padding: 0.5rem;
+            }
+        }
+    }
+}

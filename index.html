@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>農產品比價網</title>
+    <meta name="keywords" content="JavaScript,JS,前端工程師,網頁設計師">
+    <meta name="description" content="農產品比價網">
+    <meta name="author" content="不吃貓的魚">
+    <!-- FB相關 -->
+    <meta property="og:title" content="農產品比價網">
+    <meta property="og:description" content="農產品比價網">
+    <meta property="og:image" content="https://www.filepicker.io/api/file/sZrse7hzQTqvtJRtfgbU">
+    <!-- 外部連結 -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="css/all.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wrap">
+        <h1 class="logo">
+            <a href="#">Product</a>
+        </h1>
+        <div class="main">
+            <div class="data-Date">
+                <p></p>
+            </div>
+            <div class="btn-group">
+                <button id="veg-btn" class="veg-btn btn-type btn" data-type="N04">
+                    蔬菜
+                </button>
+                <button id="fruits-btn" class="fruits-btn btn-type btn" data-type="N05">
+                    水果
+                </button>
+                <button id="flowers-btn" class="flowers-btn btn-type btn" data-type="N06">
+                    花卉
+                </button>
+            </div>
+            <div class="search-group">
+                <div class="crop-input">
+                    <label for="crop-input-box" >
+                        作物名稱
+                    </label>
+                    <input type="text" id="crop-input-box" class="crop-input-box" placeholder="請輸入作物名稱">
+                </div>
+                <button class="search-btn btn">
+                    搜尋
+                </button>
+            </div>
+            <div class="sort-content">
+                <p class="keywords hide">
+                    查看「<span></span>」的比價結果
+                </p>
+                <div class="option-group">
+                    <select name="num" id="" class="num-option btn">
+                        <option value="10">每頁顯示10筆</option>
+                        <option value="30">每頁顯示30筆</option>
+                        <option value="50">每頁顯示50筆</option>
+                        <option value="100">每頁顯示100筆</option>
+                    </select>
+                    <select name="sort" id="" class="sort-option btn">
+                        <option value="">排序篩選</option>
+                        <option value="上價">依上價排序</option>
+                        <option value="中價">依中價排序</option>
+                        <option value="下價">依下價排序</option>
+                        <option value="平均價">依平均價排序</option>
+                        <option value="交易量">依交易量排序</option>
+                    </select>
+                </div>
+            </div>
+            <table class="sort-table">
+                <thead>
+                    <tr>
+                        <th width="15%">作物名稱</th>
+                        <th width="15%">市場名稱</th>
+                        <th width="14%">
+                            上價
+                            <span class="sort-icon">
+                                <i data-sort="Raising" class="fa-solid fa-sort-up sort-up"></i>
+                                <i data-sort="Lowering" class="fa-solid fa-sort-down sort-down"></i>
+                            </span>
+                        </th>
+                        <th width="14%">
+                            中價
+                            <span class="sort-icon">
+                                <i data-sort="Raising" class="fa-solid fa-sort-up sort-up"></i>
+                                <i data-sort="Lowering" class="fa-solid fa-sort-down sort-down"></i>
+                            </span>
+                        </th>
+                        <th width="14%">
+                            下價
+                            <span class="sort-icon">
+                                <i data-sort="Raising" class="fa-solid fa-sort-up sort-up"></i>
+                                <i data-sort="Lowering" class="fa-solid fa-sort-down sort-down"></i>
+                            </span>
+                        </th>
+                        <th width="14%">
+                            平均價
+                            <span class="sort-icon">
+                                <i data-sort="Raising" class="fa-solid fa-sort-up sort-up"></i>
+                                <i data-sort="Lowering" class="fa-solid fa-sort-down sort-down"></i>
+                            </span>
+                        </th>
+                        <th width="14%">
+                            交易量
+                            <span class="sort-icon">
+                                <i data-sort="Raising" class="fa-solid fa-sort-up sort-up"></i>
+                                <i data-sort="Lowering" class="fa-solid fa-sort-down sort-down"></i>
+                            </span>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="filter-list">
+                    <tr>
+                        <td colspan="7" class="">資料載入中.....</td>
+                    </tr>
+                </tbody>
+            </table>
+            <ul class="pageArea hide">
+                <li class="fa-solid fa-angles-left first" page-num="1"></li>
+                <li class="fa-solid fa-angle-left prev" page-num="1"></li>
+                <li class="fa-solid fa-angle-right next" page-num="26"></li>
+                <li class="fa-solid fa-angles-right last" page-num="26"></li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/main.js?=02040301"></script>
+</body>
+</html>
